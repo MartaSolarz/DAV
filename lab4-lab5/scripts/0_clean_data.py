@@ -23,4 +23,6 @@ df['AverageTemperatureUncertaintyCelsius'] = (df['AverageTemperatureUncertaintyF
 
 df.drop(columns=['AverageTemperatureFahr', 'AverageTemperatureUncertaintyFahr'], inplace=True)
 
+df['City'] = df['City'].map(lambda x: "Brasilia" if x == "BrasÃ­lia" else x)
+
 df.to_csv('../data/temperatures_clean.csv', index=False)

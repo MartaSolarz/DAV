@@ -2,7 +2,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def fig7(df):
+from utils import get_parse_args
+
+
+def create_plot(df, mode):
     plt.figure(figsize=(12, 8))
 
     sns.violinplot(x='country_id', y='AverageTemperatureCelsius', data=df, color='skyblue')
@@ -12,8 +15,13 @@ def fig7(df):
     plt.ylabel('Average Temperature (°C)')
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
     plt.tight_layout()
-    plt.savefig('../plots/fig7.png')
+    if mode == "1":
+        print("Saving plot to ../plots/task3c.png")
+        plt.savefig('../plots/task3c.png')
+    else:
+        plt.show()
 
 
+args = get_parse_args()
 df = pd.read_csv("../data/temperatures_clean.csv")
-fig7(df)
+create_plot(df, args.mode)

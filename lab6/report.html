@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plots</title>
+    <style>
+        body {
+            font-family: Geneva, Tahoma, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #000098;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: left
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin: 10px 0;
+            text-align: left;
+        }
+        .plot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .text {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .table {
+            margin: 20px 0;
+            text-align: center;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>The importance of the ploting</h1>
+
+    <h2>Task 1</h2>
+    <h3>Anscombe's quartet - ans.csv</h3>
+    <table>
+  <tr>
+    <th>Property</th>
+    <th>Value</th>
+    <th>Accuracy</th>
+  </tr>
+  <tr>
+    <td>Mean of x</td>
+    <td>9.00</td>
+    <td>Exact</td>
+  </tr>
+  <tr>
+    <td>Sample variance of x</td>
+    <td>10.23</td>
+    <td>Approximate (up to 2 places)</td>
+  </tr>
+  <tr>
+    <td>Mean of y</td>
+    <td>7.50</td>
+    <td>Approximate (up to 2 places)</td>
+  </tr>
+  <tr>
+    <td>Sample variance of y</td>
+    <td>3.84</td>
+    <td>Approximate (up to 2 places)</td>
+  </tr>
+  <tr>
+    <td>Correlation between x and y</td>
+    <td>0.816</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+  <tr>
+    <td>Linear regression line (y = a+bx)</td>
+    <td>y = 3.00 + 0.50x</td>
+    <td>Approximate (up to 2 places)</td>
+  </tr>
+  <tr>
+    <td>Coefficient of determination of the linear regression</td>
+    <td>0.67</td>
+    <td>Approximate (up to 2 places)</td>
+  </tr>
+</table>
+
+    <div class="plot">
+        <p>Single plot similar to the one from <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Wikipedia</a>.</p>
+        <img src="./plots/task1.png" alt="Task 1">
+    </div>
+
+    <h2>Task 2</h2>
+    <h3>Multiple datasets - ans2.tsv</h3>
+        <table>
+  <tr>
+    <th>Property</th>
+    <th>Value</th>
+    <th>Accuracy</th>
+  </tr>
+  <tr>
+    <td>Mean of x</td>
+    <td>54.266</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+  <tr>
+    <td>Mean of y</td>
+    <td>47.835</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+  <tr>
+    <td>SD of x</td>
+    <td>16.713</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+  <tr>
+    <td>SD of y</td>
+    <td>26.848</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+  <tr>
+    <td>Corr</td>
+    <td>-0.066</td>
+    <td>Approximate (up to 3 places)</td>
+  </tr>
+</table>
+    <div class="plot">
+        <p>Separate subplots for each dataset.</p>
+        <img src="./plots/task2.png" alt="Task 1">
+    </div>
+    <div class="text">
+        <p>In this dataset:</p>
+        <ul>
+            <li>d denotes a dinosaur-shaped dataset</li>
+            <li>s denotes a star-shaped dataset</li>
+        </ul>
+    </div>
+    <footer>
+            Author: Marta Solarz, MISMaP UW; 2024
+    </footer>
+</body>
+
+</html>

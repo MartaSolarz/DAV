@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gapminder Data Visualization</title>
+</head>
+<body>
+    <input type="range" min="1952" max="2007" value="1952" step="1" id="yearSlider" oninput="updateYear(this.value)">
+    <script>
+        function updateYear(year) {
+            document.getElementById('svgContainer').innerHTML = '<object type="image/svg+xml" data="gapminder_scatter_' + year + '.svg" width="800" height="600">Your browser does not support SVG</object>';
+        }
+    </script>
+    <div id="svgContainer">
+        <object type="image/svg+xml" data="gapminder_scatter_1952.svg" width="800" height="600">Wait...</object>
+    </div>
+</body>
+</html>

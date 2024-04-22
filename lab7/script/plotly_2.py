@@ -11,7 +11,7 @@ if mode not in ["0", "1"]:
     print('Invalid mode')
     sys.exit(1)
 
-data = pd.read_csv('./data/gapminder.csv')
+data = pd.read_csv('../data/gapminder.csv')
 
 df = data[data['year'] == 2007][['continent', 'lifeExp']]
 
@@ -22,5 +22,5 @@ fig.update_yaxes(range=[0, 100])
 if mode == "0":
     fig.show()
 else:
-    fig.write_html('./plots/plotly_2.html')
+    fig.write_html('../plots/plotly_2.html')
     print('HTML file has been generated successfully. Path: plots/plotly_2.html')

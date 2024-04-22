@@ -11,7 +11,7 @@ if mode not in ["0", "1"]:
     print('Invalid mode')
     sys.exit(1)
 
-data = pd.read_csv('./data/gapminder.csv')
+data = pd.read_csv('../data/gapminder.csv')
 
 df = data[data['year'] == 2007][['continent', 'lifeExp']]
 
@@ -41,5 +41,5 @@ for continent, values in box_data.items():
 if mode == "0":
     box_plot.render_in_browser()
 else:
-    box_plot.render_to_file('./plots/pygal_2.svg')
+    box_plot.render_to_file('../plots/pygal_2.svg')
     print('SVG file has been generated successfully. Path: plots/pygal_2.svg')

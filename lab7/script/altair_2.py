@@ -13,7 +13,7 @@ if mode not in ["0", "1"]:
     print('Invalid mode')
     sys.exit(1)
 
-data = pd.read_csv('./data/gapminder.csv')
+data = pd.read_csv('../data/gapminder.csv')
 
 df = data[data['year'] == 2007][['continent', 'lifeExp']]
 
@@ -28,7 +28,7 @@ box_plot = alt.Chart(df).mark_boxplot().encode(
     title='Life Expectancy by Continent (2007)'
 )
 
-html_file_path = './plots/altair_2.html'
+html_file_path = '../plots/altair_2.html'
 box_plot.save(html_file_path)
 
 if mode == "0":

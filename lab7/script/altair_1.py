@@ -13,7 +13,7 @@ if mode not in ["0", "1"]:
     print('Invalid mode')
     sys.exit(1)
 
-data = pd.read_csv('./data/gapminder.csv')
+data = pd.read_csv('../data/gapminder.csv')
 
 slider = alt.binding_range(min=1952, max=2007, step=5)
 select_year = alt.selection_point(name="select", fields=['year'],
@@ -34,7 +34,7 @@ base = alt.Chart(data).mark_circle().encode(
     height=400
 )
 
-html_file_path = './plots/altair_1.html'
+html_file_path = '../plots/altair_1.html'
 base.save(html_file_path)
 
 if mode == "0":
